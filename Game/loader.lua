@@ -1,10 +1,15 @@
 local a = tostring(game.PlaceId)
-local b = {}
-if b[a] then
-    a = b[a]
+local b = identifyexecutor() or getexecutorname()
+local c = {"Solara", "Xeno"}
+local d = {}
+if d[a] then
+    a = d[a]
 end
-local function c()
-    local d, e =
+if table.find(c, b) then
+    game.Players.LocalPlayer:Kick("Executor is Blacklist")
+end
+local function e()
+    local f, g =
         pcall(
         function()
             return game:HttpGet(
@@ -12,15 +17,15 @@ local function c()
             )
         end
     )
-    if d and type(e) == "string" then
-        local f, g = loadstring(e)
-        if f then
-            pcall(f)
+    if f and type(g) == "string" then
+        local h, i = loadstring(g)
+        if h then
+            pcall(h)
         else
-            warn("Error Load Script: ", g)
+            warn("Error Load Script: ", i)
         end
     else
         warn("Error Get Script")
     end
 end
-c()
+e()
