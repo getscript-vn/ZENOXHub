@@ -26,6 +26,13 @@ local function s()
     if o then
         o:Destroy()
     end
+    task.spawn(function()
+ while wait() do
+    if game:GetService('Lighting'):FindFirstChildOfClass('BlurEffect') then
+         game:GetService('Lighting'):FindFirstChildOfClass('BlurEffect'):Destroy()
+    end
+ end
+end)
 end
 local function t()
     l = Instance.new("ScreenGui")
