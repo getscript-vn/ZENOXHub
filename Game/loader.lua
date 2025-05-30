@@ -113,9 +113,11 @@ function a.Init()
     if j[h] then
         h = j[h]
     end
-    if table.find(i, k) then
-        q("Executor bị chặn: " .. k)
-    end
+        for i,v in pairs(i) do
+            if v == k or string.find(v,k) then
+                q("Executor is Blacklist: " .. k .."\n Change Exec")
+            end
+        end
     t()
     u()
 end
