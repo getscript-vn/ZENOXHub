@@ -23,9 +23,10 @@ local function e()
             pcall(h)
         else
             warn("Error Load Script: ", i)
+            game.Players.LocalPlayer:KicK("Error Load Script: \n Script Đang Bị Lỗi Hãy quay lại sau")
         end
     else
-        warn("Error Get Script")
+        game.Players.LocalPlayer:KicK("Error Get Script\n Chạy Lại Script 1 Lần Nữa")
     end
 end
 e()
