@@ -1,3 +1,4 @@
+print('Run Loader')
 local a = tostring(game.PlaceId)
 local b = identifyexecutor() or getexecutorname()
 local c = {"Solara", "Xeno"}
