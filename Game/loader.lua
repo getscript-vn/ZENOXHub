@@ -92,13 +92,6 @@ local function u()
         if x then
             p.Text = c .. " Loaded. Running script..."
             local z, A = pcall(x)
-            if not z then
-                p.Text = c .. " Script runtime error."
-                warn("Script Runtime Error: ", A)
-                wait(3)
-                q("Lỗi khi chạy script.\nVui lòng thử lại sau.")
-                return "Error"
-            end
             s()
         else
             warn("Error Load Script: ", y)
