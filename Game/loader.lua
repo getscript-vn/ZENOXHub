@@ -5,7 +5,7 @@ local d = game:GetService("CoreGui")
 local e = game:GetService("Lighting")
 local f = game:GetService("Players")
 local g = f.LocalPlayer
-local h = tostring(game.PlaceId)
+local h = (getgenv().ZenoxMode or tostring(game.PlaceId))
 local i = {"Solara", "Xeno"}
 local j = {}
 local k
